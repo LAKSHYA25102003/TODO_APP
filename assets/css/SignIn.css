@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#content{
+    border: 2px solid rgba(128, 128, 128, 0.539);
+    border-radius: 5px;
+    height: 65%;
+    width:40%;
+    background-color: rgba(128, 128, 128, 0.329);
+}
+#content h1{
+    text-align: center;
+    padding: 15px;
+}
+input{
+    margin: 5px;
+}
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+#submit input{
+    font-size: 1.3em;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+label{
+    padding: 8px;
+    font-size: 1.3em;
+}
+#email{
+    width: 98%;
+    border-radius: 5px;
+    padding: 5px;
+}
+#password{
+    width: 98%;
+    border-radius: 5px;
+    padding: 5px;
+}
+#name{
+    width: 98%;
+    border-radius: 5px;
+    padding: 5px;
+}
+#register{
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 5px;
+}
+
+
+footer{
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    width: 100vw;
+    bottom: 0px;
+    color: black;
+    background-color: rgba(128, 128, 128, 0.203);
+}

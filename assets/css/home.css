@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+*{
+    box-sizing: border-box;
+}
+#nav{
+    padding-top: 0px;
+}
+#nav form h1{
+    color: black;
+    padding-right: 10px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3.5em;
+}
+#btn{
+    position: absolute;
+    right: 20px;
+}
+#section{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#content{
+    color: white;
+    text-align: center;
+}
+#content div{
+    text-align: center;
+    
+    font-weight: bolder;
+}
+#content div a{
+    text-decoration: underline;
+    color: white;
+}
+#content h2{
+    font-size: 3.5em;
+}
+#content h3{
+    font-size: 3em;
+}
+#content h4{
+    font-size: 2.8em;
+}
+#content div{
+    font-size: 1.5em;
+}
+
+footer{
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    width: 100vw;
+    bottom: 0px;
+    color: black;
+}
+
