@@ -1,6 +1,10 @@
 const express=require("express");
 const port=8000;
 const app=express();
+const db=require("./config/mongoose.js");
+const User=require("./models/user.js");
+const Tasks=require("./models/userTasks");
+
 
 
 // middle ware
