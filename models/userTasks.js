@@ -1,5 +1,6 @@
 const mongoose=require("mongoose");
-
+const User=require("./user");
+const loginUser=require("../index.js");
 const taskSchema=new mongoose.Schema({
     description:{
         type:String,
@@ -10,7 +11,11 @@ const taskSchema=new mongoose.Schema({
         required:true
     },
     date:{
-        type:Date,
+        type:String,
+        required:true
+    },
+    creator:{
+        type:String,
         required:true
     }
 },{

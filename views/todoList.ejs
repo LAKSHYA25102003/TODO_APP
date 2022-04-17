@@ -17,13 +17,19 @@
 </head>
 <body>
     <div id="main-container">
-        <h1>ToDo App</h1>
+        <div id="user-signout">
+            <div id="name"><h2>Name:<%=user.name%></h2></div>
+            <h1 id="title">ToDo App</h1>
+            <div id="signout">
+                <a href="/users/SignOut" class="btn btn-secondary btn-lg " tabindex="-1" role="button" aria-disabled="true"> <span class="icon" ><i class="fa fa-sign-out" aria-hidden="true"></i></span> Sign Out</a>
+            </div>
+        </div>
         <div id="list">
-            <form action="/users/add-work" method="post">
+            <form action="/users/create-session/add-work" method="post">
                 <div id="description">
                     <label for="description-input">DESCRIPTION</label>
                     <br>
-                    <input type="text" id="description-input"  name="descripton"  placeholder="What do you need to do?" required>
+                    <input type="text" id="description-input"  name="description"  placeholder="What do you need to do?" required>
                 </div>
                 <div id="category-date">
                     <div id="category">
@@ -45,14 +51,40 @@
                     </div>
                 </div>
                 <div id="add-delete">
-                    <button type="submit" class="btn btn-secondary btn-lg"><span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span> ADD TASK</button>
-                    <a href="#" class="btn btn-danger btn-lg " tabindex="-1" role="button" aria-disabled="true"> <span class="icon" ><i class="fa fa-trash" aria-hidden="true"></i></span> DELETE TASK</a>
+                    <button type="submit" class="btn btn-danger btn-lg"><span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span> ADD TASK</button>
+                    
                 </div>
             </form>
-            <div id="tasks">
-
+            <div id="task-list">
+                <%for(let i of works){%>
+                    <div class="task-member">
+                        <div class="description-date">
+                            <div class="work-description">
+                                <p>	&#9658;<%=i.description%></p>
+                            </div>
+                            <div class="date-work">
+                                <p><span><i  class="fa fa-calendar icon" aria-hidden="true"></i></span><span><%=i.date%></p></span>
+                            </div>
+                        </div>
+                        <div class="edit-delete">
+                            <div class="work-category task-btn">
+                                <button  class="btn btn-warning btn-sm"><%=i.category%></button>
+                            </div>
+                            <div class="edit task-btn">
+                                <a href="#" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true"> <span class="icon" ><i class="fa fa-pencil" aria-hidden="true"></i></span>EDIT</a>
+                            </div>
+                            <div class="deletion task-btn">
+                                <a href="#" class="btn btn-secondary btn-sm " tabindex="-1" role="button" aria-disabled="true"> <span class="icon" ><i class="fa fa-trash" aria-hidden="true"></i></span> DELETE TASK</a>
+                            </div>
+                        </div>
+                    </div>
+                <%}%>
             </div>
         </div>
+    </div>
+    <footer>
+        &#169; 2022 ToDoist, inc 
+      </footer>
     </div>
 </body>
 </html>
