@@ -12,7 +12,7 @@ body{
 #content{
     border: 2px solid rgba(128, 128, 128, 0.539);
     border-radius: 5px;
-    height: 75%;
+    height: 73%;
     width:40%;
     background-color: rgba(128, 128, 128, 0.329);
 }
@@ -79,4 +79,14 @@ footer a{
     font-size: 1.2em;
     font-weight: bold;
     color: wheat;
+}
+#register{
+    text-align: center;
+    padding: 8px;
+    font-size: 1.2em;
+    
+    font-weight: bold;
+}
+#register a{
+    text-decoration: none;
 }

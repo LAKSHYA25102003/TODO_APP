@@ -12,7 +12,7 @@ body{
 #content{
     border: 2px solid rgba(128, 128, 128, 0.539);
     border-radius: 5px;
-    height: 65%;
+    height: 58%;
     width:40%;
     background-color: rgba(128, 128, 128, 0.329);
 }
@@ -59,6 +59,10 @@ label{
     text-align: center;
     font-size: 1.3em;
     margin-top: 5px;
+    font-weight: bold;
+}
+#register a{
+    text-decoration: none;
 }
 
 
