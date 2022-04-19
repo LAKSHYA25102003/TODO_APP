@@ -64,10 +64,23 @@ label{
 
 footer{
     text-align: center;
-    background-color: white;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
     width: 100vw;
     bottom: 0px;
-    color: black;
-    background-color: rgba(128, 128, 128, 0.203);
+    flex-direction: column;
+    left: 0px;
+    color: white;
+    background-color: black;
+    height: fit-content;
+    padding-bottom: 5px;
+}
+footer a{
+    text-decoration: none;
+    padding: 6px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: wheat;
 }

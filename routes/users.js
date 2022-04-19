@@ -12,7 +12,7 @@ router.post("/create-session",passport.authenticate("local",{
 router.post("/create-user",users_controllers.create_user);
 
 router.get("/SignOut",users_controllers.SignOut);
-router.get("/todoList",users_controllers.todoList);
+router.get("/todoList",passport.checkAuthentication,users_controllers.todoList);
 
 router.use("/create-session",require("./list"));
 

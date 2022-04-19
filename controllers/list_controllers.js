@@ -13,7 +13,7 @@ module.exports={
             {
                 console.log("error in adding work");
                 console.log(err);
-                return res.redirect("back");
+                return res.redirect("/users/todoList");
             } 
             res.redirect("/users/todoList");  
         });
@@ -40,5 +40,35 @@ module.exports={
         //         })
         //     });
         // })
+    },
+    updateWork:function(req,res)
+    {
+        let id=req.query.id;
+        Task.findByIdAndUpdate(id,{
+            description:req.body.description,
+            date:req.body.date,
+            category:req.body.category
+        },function(err,task)
+        {
+            if(err)
+            {
+                console.log("error in editing task");
+                return res.redirect('/users/todoList');
+            }
+            res.redirect('/users/todoList');
+        });
+    },
+    deleteWork:function(req,res)
+    {
+        let id=req.query.id;
+        Task.findByIdAndDelete(id,function(err)
+        {
+            if(err)
+            {
+                console.log("there is an error in deleting your task");
+                return res.redirect("back");
+            }
+            res.redirect("/users/todoList");
+        })
     }
 }

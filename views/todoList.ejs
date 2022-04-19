@@ -25,7 +25,7 @@
             </div>
         </div>
         <div id="list">
-            <form action="/users/create-session/add-work" method="post">
+            <form action="/users/create-session/add-work" method="post" id="my-form">
                 <div id="description">
                     <label for="description-input">DESCRIPTION</label>
                     <br>
@@ -71,10 +71,12 @@
                                 <button  class="btn btn-warning btn-sm"><%=i.category%></button>
                             </div>
                             <div class="edit task-btn">
-                                <a href="#" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true"> <span class="icon" ><i class="fa fa-pencil" aria-hidden="true"></i></span>EDIT</a>
+                                <button type="submit" formmethod="post" class="btn btn-primary btn-sm " form="my-form" id="editTask" formaction="/users/create-session/update-work/?id=<%=i.id%>"> <span class="icon" ><i class="fa fa-pencil" aria-hidden="true"></i></span>UPDATE</button>
+                                <!-- <a href="/users/create-session/update-work/?id=<%=i.id%>" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true"> <span class="icon" ><i class="fa fa-pencil" aria-hidden="true"></i></span>EDIT</a> -->
                             </div>
                             <div class="deletion task-btn">
-                                <a href="#" class="btn btn-secondary btn-sm " tabindex="-1" role="button" aria-disabled="true"> <span class="icon" ><i class="fa fa-trash" aria-hidden="true"></i></span> DELETE TASK</a>
+                                
+                                <a href="/users/create-session/delete-work/?id=<%=i.id%>" class="btn btn-secondary btn-sm " tabindex="-1" role="button" aria-disabled="true"> <span class="icon" ><i class="fa fa-trash" aria-hidden="true"></i></span> DELETE TASK</a>
                             </div>
                         </div>
                     </div>
@@ -83,8 +85,10 @@
         </div>
     </div>
     <footer>
+        <a href="/">Home</a>
         &#169; 2022 ToDoist, inc 
       </footer>
     </div>
+    <script src="../assets/js/todoList.js"></script>
 </body>
 </html>

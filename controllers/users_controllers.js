@@ -3,11 +3,21 @@ const Task=require("../models/userTasks");
 module.exports={
     SignIn:function(req,res)
     {
-        return res.render('SignIn');
+        if(req.isAuthenticated())
+        {
+            return res.redirect('/users/todoList');
+        }
+        return res.render("SignIn");
     },
     SignUp:function(req,res)
     {
+        if(req.isAuthenticated())
+        {
+            return res.redirect('/users/todoList');
+        }
         return res.render("SignUp");
+        
+        
     },
     create_user:function(req,res)
     {

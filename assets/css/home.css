@@ -57,10 +57,18 @@ body{
 
 footer{
     text-align: center;
-    background-color: white;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
     width: 100vw;
     bottom: 0px;
-    color: black;
+    flex-direction: column;
+    left: 0px;
+    color: white;
+    background-color: black;
+    height: fit-content;
+    padding-bottom: 5px;
 }
+
 
